@@ -13,6 +13,7 @@ Autor Name | Source | Test Method | Time | Result
 | Znuf | USA/ ASIA |   |  |
 | nAffies | USA/ ASIA |   |  |
 | PT-Officiel-2.0.4 | USA/ ASIA |   |  |
+| Pintax | Me | | |
 
 
 ## Remember
