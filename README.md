@@ -14,3 +14,9 @@ Autor Name | Source | Test Method | Time | Result
 | nAffies | USA/ ASIA |   |  |
 | PT-Officiel-2.0.4 | USA/ ASIA |   |  |
 
+
+## Remember
+
+Reset data test:
+- http://localhost:8081/settings/test/reset
+- 
