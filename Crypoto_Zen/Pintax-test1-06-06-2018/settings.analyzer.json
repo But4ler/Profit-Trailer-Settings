@@ -1,0 +1,243 @@
+{
+  "AnalyzerSettings": {
+    "MarketAnalyzer": {
+      "StoreDataMaxHours": 72,
+      "IntervalMinutes": 7,
+      "ExcludeMainCurrency": true,
+      "MarketTrends": [
+        {
+          "Name": "AltCoins30m",
+          "Platform": "Exchange",
+          "MaxMarkets": 20,
+          "TrendMinutes": 30
+        },
+        {
+          "Name": "AltCoins1h",
+          "Platform": "Exchange",
+          "MaxMarkets": 20,
+          "TrendMinutes": 60,
+          "DisplayGraph": false
+        },
+        {
+          "Name": "AltCoins24h",
+          "Platform": "Exchange",
+          "MaxMarkets": 20,
+          "TrendMinutes": 1440
+        },
+        {
+          "Name": "AltCoins48h",
+          "Platform": "Exchange",
+          "MaxMarkets": 20,
+          "TrendMinutes": 2880
+        },
+        {
+          "Name": "AltCoins72h",
+          "Platform": "Exchange",
+          "MaxMarkets": 20,
+          "TrendMinutes": 4320,
+          "DisplayGraph": false
+        },
+        {
+          "Name": "BTC30m",
+          "Platform": "CoinMarketCap",
+          "MaxMarkets": 1,
+          "TrendMinutes": 30
+        },
+        {
+          "Name": "BTC24h",
+          "Platform": "CoinMarketCap",
+          "MaxMarkets": 1,
+          "TrendMinutes": 1440
+        }
+      ]
+    },
+    "GlobalSettings": [
+      {
+        "SettingName": "Bullish",
+        "TriggerConnection": "OR",
+        "Triggers": [
+          {
+            "MarketTrendName": "AltCoins30m",
+            "MaxChange": 50.0,
+            "MinChange": 0.75
+          },
+          {
+            "MarketTrendName": "BTC24h",
+            "MaxChange": 50.0,
+            "MinChange": 4.0
+          },
+          {
+            "MarketTrendName": "AltCoins24h",
+            "MaxChange": 50.0,
+            "MinChange": 3.0
+          }
+        ],
+        "PairsProperties": {
+          "DEFAULT_A_sell_value_OFFSETPERCENT": 3
+        },
+        "DCAProperties": {
+          "DEFAULT_DCA_A_sell_value_OFFSETPERCENT": 3
+        },
+        "IndicatorsProperties": {}
+      },
+      {
+        "SettingName": "VeryBearish",
+        "TriggerConnection": "OR",
+        "Triggers": [
+          {
+            "MarketTrendName": "AltCoins30m",
+            "MaxChange": -1.76,
+            "MinChange": -50.0
+          },
+          {
+            "MarketTrendName": "BTC30m",
+            "MaxChange": -1.76,
+            "MinChange": -50.0
+          },
+          {
+            "MarketTrendName": "AltCoins24h",
+            "MaxChange": -5.0,
+            "MinChange": -50.0
+          },
+          {
+            "MarketTrendName": "BTC24h",
+            "MaxChange": -5.0,
+            "MinChange": -50.0
+          }
+        ],
+        "PairsProperties": {
+          "DEFAULT_trailing_buy ": 1.7
+        },
+        "DCAProperties": {},
+        "IndicatorsProperties": {}
+      },
+      {
+        "SettingName": "Bearish",
+        "TriggerConnection": "OR",
+        "Triggers": [
+          {
+            "MarketTrendName": "AltCoins30m",
+            "MaxChange": -1.25,
+            "MinChange": -1.75
+          },
+          {
+            "MarketTrendName": "BTC30m",
+            "MaxChange": -1.5,
+            "MinChange": -1.75
+          },
+          {
+            "MarketTrendName": "AltCoins24h",
+            "MaxChange": -4.0,
+            "MinChange": -4.99
+          },
+          {
+            "MarketTrendName": "BTC24h",
+            "MaxChange": -4.0,
+            "MinChange": -4.99
+          }
+        ],
+        "PairsProperties": {
+          "DEFAULT_trailing_buy ": 1
+        },
+        "DCAProperties": {},
+        "IndicatorsProperties": {}
+      },
+      {
+        "SettingName": "Default",
+        "Triggers": [],
+        "PairsProperties": {
+          "File": "PAIRS.properties"
+        },
+        "DCAProperties": {
+          "File": "DCA.properties"
+        },
+        "IndicatorsProperties": {
+          "File": "INDICATORS.properties"
+        }
+      }
+    ],
+    "SingleMarketSettings": [
+      {
+        "SettingName": "HighGainDropperBlock24h",
+        "TriggerConnection": "OR",
+        "Triggers": [
+          {
+            "MarketTrendName": "AltCoins24h",
+            "MinChange": 7.0
+          }
+        ],
+        "OffTriggers": [],
+        "PairsProperties": {
+          "DEFAULT_sell_only_mode_enabled": true
+        },
+        "DCAProperties": {},
+        "IndicatorsProperties": {}
+      },
+      {
+        "SettingName": "HighGainDropperBlock48h",
+        "TriggerConnection": "OR",
+        "Triggers": [
+          {
+            "MarketTrendName": "AltCoins48h",
+            "MinChange": 10.0
+          }
+        ],
+        "OffTriggers": [],
+        "PairsProperties": {
+          "DEFAULT_sell_only_mode_enabled": true
+        },
+        "DCAProperties": {},
+        "IndicatorsProperties": {}
+      },
+      {
+        "SettingName": "HighGainDropperBlock72h",
+        "TriggerConnection": "OR",
+        "Triggers": [
+          {
+            "MarketTrendName": "AltCoins72h",
+            "MinChange": 15.0
+          }
+        ],
+        "OffTriggers": [],
+        "PairsProperties": {
+          "DEFAULT_sell_only_mode_enabled": true
+        },
+        "DCAProperties": {},
+        "IndicatorsProperties": {}
+      },
+      {
+        "SettingName": "FreefallBlocker5percent1h",
+        "TriggerConnection": "OR",
+        "Triggers": [
+          {
+            "MarketTrendName": "AltCoins1h",
+            "MarketTrendRelation": "Absolute",
+            "MaxChange": -5.0
+          }
+        ],
+        "OffTriggers": [],
+        "PairsProperties": {
+          "DEFAULT_sell_only_mode_enabled": true,
+          "DEFAULT_DCA_enabled": false
+        },
+        "DCAProperties": {},
+        "IndicatorsProperties": {}
+      },
+      {
+        "SettingName": "NewCoinBlocker3days",
+        "TriggerConnection": "AND",
+        "Triggers": [
+          {
+            "AgeDaysLowerThan": 3
+          }
+        ],
+        "OffTriggers": [],
+        "PairsProperties": {
+          "DEFAULT_sell_only_mode_enabled": true
+        },
+        "DCAProperties": {},
+        "IndicatorsProperties": {}
+      }
+    ]
+  }
+}

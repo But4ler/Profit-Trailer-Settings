@@ -21,4 +21,8 @@ Timeframe | Autor Name | Source | Explication |
 
 Reset data test:
 - http://localhost:8081/settings/test/reset
-- 
+
+Disable SOM - SOMO
+- /settings/overrideSellOnlyMode?enabled=false  (pour désactiver et maintenir désactivé SOM)
+- /settings/overrideSellOnlyMode?enabled=true (pour activer et maintenir activé SOM)
+- /settings/overrideSellOnlyMode (pour désactiver ce qui a été forcé et revenir en mode normal - les paramètres btc_rise, btc_drop refonctionnent alors.)

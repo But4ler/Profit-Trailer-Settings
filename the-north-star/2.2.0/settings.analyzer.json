@@ -1,0 +1,432 @@
+/* *************************************************************************
+*                 The North Star: Settings for ProfitTrailer 2             *
+****************************************************************************
+* Developers:     Discord @stevenshizzle#8860 / Telegram @stevenshizzle    *
+*                 Discord @cabbage#4164                                    *
+* Contributors:   @smoochy#6365 (disc) @fransenson#5625 (disc)             *
+*                 @samueldc (tel)                                          *
+* Thanks:         theWolfsofCrypto (tinyurl.com/WolfsOfCrypto)             *
+* Tested With:    ProfitTrailer 2.0.3 / PTMagic 1.6.1                      *
+* URL:            www.thenorthstarsettings.com                             *
+* File:           PTM settings.analyzer.json                               *
+* Last Update:    v2.2.0 - 13 MAY 2018                                     *
+************************************************************************* */
+
+/* ********* Change only via text editor -- NOT via PTMagic GUI ********* */ 
+
+{
+    "AnalyzerSettings": {
+      "MarketAnalyzer": {
+        "StoreDataMaxHours": 144,
+        "IntervalMinutes": 5,
+        "ExcludeMainCurrency": false,
+        "MarketTrends": [
+          {
+            "Name": "MainCurrency3h",
+            "Platform": "CoinMarketCap",
+            "AllowedMarkets": "ETH",
+            "MaxMarkets": 1,
+            "TrendMinutes": 180,
+            "DisplayOnMarketAnalyzerList": false,
+            "DisplayGraph": false
+          },
+          {
+            "Name": "MainCurrency24h",
+            "Platform": "CoinMarketCap",
+            "AllowedMarkets": "ETH",
+            "MaxMarkets": 1,
+            "TrendMinutes": 1440
+          },
+          {
+            "Name": "Exchange30m",
+            "Platform": "Exchange",
+            "MaxMarkets": 50,
+            "TrendMinutes": 30,
+            "DisplayOnMarketAnalyzerList": false,
+            "DisplayGraph": false
+          },
+          {
+            "Name": "Exchange1h",
+            "Platform": "Exchange",
+            "MaxMarkets": 50,
+            "TrendMinutes": 60
+          },
+          {
+            "Name": "Exchange3h",
+            "Platform": "Exchange",
+            "MaxMarkets": 50,
+            "TrendMinutes": 180,
+            "DisplayOnMarketAnalyzerList": false,
+            "DisplayGraph": false
+          },
+          {
+            "Name": "Exchange6h",
+            "Platform": "Exchange",
+            "MaxMarkets": 50,
+            "TrendMinutes": 360,
+            "DisplayOnMarketAnalyzerList": false,
+            "DisplayGraph": false
+          },
+          {
+            "Name": "Exchange11h",
+            "Platform": "Exchange",
+            "MaxMarkets": 50,
+            "TrendMinutes": 660
+          },
+          {
+            "Name": "Exchange15h",
+            "Platform": "Exchange",
+            "MaxMarkets": 50,
+            "TrendMinutes": 900,
+            "DisplayOnMarketAnalyzerList": false,
+            "DisplayGraph": false
+          },
+          {
+            "Name": "Exchange18h",
+            "Platform": "Exchange",
+            "MaxMarkets": 50,
+            "TrendMinutes": 1080,
+            "DisplayOnMarketAnalyzerList": false,
+            "DisplayGraph": false
+          },
+          {
+            "Name": "Exchange21h",
+            "Platform": "Exchange",
+            "MaxMarkets": 50,
+            "TrendMinutes": 1260,
+            "DisplayOnMarketAnalyzerList": false,
+            "DisplayGraph": false
+          },
+          {
+            "Name": "Exchange24h",
+            "Platform": "Exchange",
+            "MaxMarkets": 50,
+            "TrendMinutes": 1440
+          }
+        ]
+      },
+      "GlobalSettings": [
+        {
+          "SettingName": "MainCurrencyTrendCritical",
+          "TriggerConnection": "OR",
+          "Triggers": [
+            {
+              "MarketTrendName": "MainCurrency24h",
+              "MinChange": 5.99
+            },
+            {
+              "MarketTrendName": "MainCurrency24h",
+              "MaxChange": -5.99
+            }
+          ],
+          "PairsProperties": {
+            //Sell
+            "DEFAULT_A_sell_strategy": "GAIN",
+            "DEFAULT_A_sell_value": 1.17,
+            "DEFAULT_trailing_profit": 0.33,
+            
+            //SOM
+            "DEFAULT_sell_only_mode_enabled": true
+          },
+          "DCAProperties": {
+            "DEFAULT_DCA_ignore_sell_only_mode": false
+          }
+        },
+        {
+          "SettingName": "MainCurrencyTrendWarning",
+          "TriggerConnection": "OR",
+          "Triggers": [
+            {
+              "MarketTrendName": "MainCurrency3h",
+              "MinChange": 4.00
+            },
+            {
+              "MarketTrendName": "MainCurrency24h",
+              "MinChange": 4.50,
+              "MaxChange": 5.99
+            },
+            {
+              "MarketTrendName": "MainCurrency3h",
+              "MaxChange": -3.50
+            },
+            {
+              "MarketTrendName": "MainCurrency24h",
+              "MaxChange": -4.00,
+              "MinChange": -5.99
+            }
+          ],
+          "PairsProperties": {
+            //User Configuration Needed
+            "DEFAULT_sell_only_mode_enabled": false,
+            "DEFAULT_initial_cost_percentage": 1.30,
+            "max_trading_pairs": 16,
+            
+            //Buy
+            "DEFAULT_A_buy_strategy": "RSI",
+            "DEFAULT_A_buy_value": 35.50,
+            "DEFAULT_B_buy_strategy": "LOWBB",
+            "DEFAULT_B_buy_value": -10.00,
+            "DEFAULT_B_buy_value_limit": -35.00,
+            "DEFAULT_C_buy_strategy": "STOCH",
+            "DEFAULT_C_buy_value": 20.00,
+            "DEFAULT_D_buy_strategy": "DISABLED",
+            "DEFAULT_E_buy_strategy": "DISABLED",          
+            "DEFAULT_trailing_buy": 0.50
+          },
+          "DCAProperties": {
+            "DEFAULT_DCA_ignore_sell_only_mode": false
+          }
+        },
+        {
+          "SettingName": "ExchangeTop50Downtrend",
+          "TriggerConnection": "OR",
+          "Triggers": [
+            {
+              "MarketTrendName": "Exchange1h",
+              "MaxChange": -2.50
+            },
+            {
+              "MarketTrendName": "Exchange3h",
+              "MaxChange": -2.64
+            },
+            {
+              "MarketTrendName": "Exchange6h",
+              "MaxChange": -2.85
+            },
+            {
+              "MarketTrendName": "Exchange11h",
+              "MaxChange": -4.00
+            },
+            {
+              "MarketTrendName": "Exchange15h",
+              "MaxChange": -4.00
+            },
+            {
+              "MarketTrendName": "Exchange18h",
+              "MaxChange": -4.00
+            },
+            {
+              "MarketTrendName": "Exchange21h",
+              "MaxChange": -4.00
+            },
+            {
+              "MarketTrendName": "Exchange24h",
+              "MaxChange": -4.00
+            }
+          ],
+          "PairsProperties": {
+            //User Configuration Needed
+            "DEFAULT_sell_only_mode_enabled": false,
+            "DEFAULT_initial_cost_percentage": 1.3,
+            "max_trading_pairs": 16,
+            
+            //Buy
+            "DEFAULT_A_buy_strategy": "RSI",
+            "DEFAULT_A_buy_value": 35.50,
+            "DEFAULT_B_buy_strategy": "LOWBB",
+            "DEFAULT_B_buy_value": -10.00,
+            "DEFAULT_B_buy_value_limit": -35.00,
+            "DEFAULT_C_buy_strategy": "STOCH",
+            "DEFAULT_C_buy_value": 20.00,
+            "DEFAULT_D_buy_strategy": "DISABLED",
+            "DEFAULT_E_buy_strategy": "DISABLED",   
+            "DEFAULT_trailing_buy": 0.50
+          },
+          "DCAProperties": {
+            "DEFAULT_DCA_ignore_sell_only_mode": false
+          }
+        },
+        {
+          "SettingName": "Default",
+          "Triggers": [],
+          "PairsProperties": {
+            "File": "PAIRS.properties",
+            //Buy
+            "DEFAULT_A_buy_strategy": "EMASPREAD",
+            "DEFAULT_A_buy_value": 0.62,
+            "DEFAULT_B_buy_strategy": "BBWIDTH",
+            "DEFAULT_B_buy_value": 20.00,
+            "DEFAULT_C_buy_strategy": "RSI",
+            "DEFAULT_C_buy_value": 100.00,
+            "DEFAULT_C_buy_value_limit": 52.00,
+            "DEFAULT_D_buy_strategy": "HIGHBB",
+            "DEFAULT_D_buy_value": 56.00,
+            "DEFAULT_D_buy_value_limit": 2.00,
+            "DEFAULT_E_buy_strategy": "STOCH",
+            "DEFAULT_E_buy_value": 30.00,
+            "DEFAULT_E_buy_value_limit": 5.00,
+            "DEFAULT_trailing_buy": 0.38
+          },
+          "DCAProperties": {
+            "File": "DCA.properties"
+          },
+          "IndicatorsProperties": {
+            "File": "INDICATORS.properties"
+          }
+        }
+      ],
+      "SingleMarketSettings": [
+        {
+          "SettingName": "BlacklistNewCoins",
+          "StopProcessWhenTriggered": true,
+          "Triggers": [
+            {
+              "AgeDaysLowerThan": 15
+            }
+          ],
+          "PairsProperties": {
+            "DEFAULT_trading_enabled": false,
+            "DEFAULT_sell_only_mode_enabled": true,
+            "DEFAULT_DCA_enabled": false
+          }
+        },
+        {
+          "SettingName": "KnockoutPunch",
+          "TriggerConnection": "AND",
+          "StopProcessWhenTriggered": false,
+          "Triggers": [
+            {
+            "MarketTrendName": "Exchange6h",
+            "MarketTrendRelation": "Absolute",
+            "MinChange": 3.82
+            }
+          ],
+          "PairsProperties": {
+            "DCA_enabled": -1.89,
+          },
+          "DCAProperties": {
+            "DCA_max_buy_times": 6,
+            "DCA_rebuy_timeout": 60,
+            "DCA_trailing_buy": 0.0382,
+            
+            "DCA_buy_trigger_1": -1.99,
+            "DCA_buy_trigger_2": -1.99,
+            "DCA_buy_trigger_3": -1.99,
+            "DCA_buy_trigger_4": -1.99,
+            "DCA_buy_trigger_5": -1.99,
+          
+            "DCA_A_buy_value": 2.25,
+            "DCA_A_buy_limit": 5.00,
+            "DCA_A_buy_value_1": 2.25,
+  
+            "DCA_B_buy_strategy": "DISABLED",
+            "DCA_C_buy_strategy": "DISABLED",
+            
+  
+            "DCA_buy_percentage_2": 100.00,
+            "DCA_buy_percentage_3": 100.00,
+            "DCA_buy_percentage_4": 100.00,
+            "DCA_buy_percentage_5": 100.00,
+          }
+        },
+        {
+          "SettingName": "DowntrendingPair",
+          "TriggerConnection": "OR",
+          "StopProcessWhenTriggered": true,
+          "Triggers": [
+            {
+              "MarketTrendName": "Exchange6h",
+              "MaxChange": -2.85
+            },
+            {
+              "MarketTrendName": "Exchange11h",
+              "MaxChange": -4.00
+            },
+            {
+              "MarketTrendName": "Exchange15h",
+              "MaxChange": -4.00
+            },
+            {
+              "MarketTrendName": "Exchange18h",
+              "MaxChange": -4.00
+            },
+            {
+              "MarketTrendName": "Exchange21h",
+              "MaxChange": -4.00
+            },
+            {
+              "MarketTrendName": "Exchange24h",
+              "MaxChange": -4.00
+            }          
+          ],
+          "OffTriggers": [],
+          "PairsProperties": {         
+            "initial_cost_percentage": 1.10,
+            "A_buy_strategy": "RSI",
+            "A_buy_value": 35.50,
+            "B_buy_strategy": "LOWBB",
+            "B_buy_value": -10.00,
+            "B_buy_value_limit": -35.00,
+            "C_buy_strategy": "STOCH",
+            "C_buy_value": 20.00,
+            "D_buy_strategy": "DISABLED",
+            "E_buy_strategy": "DISABLED",   
+            "trailing_buy": 0.50
+          }
+        },
+        {
+          "SettingName": "MidSupportProfitAdj",
+          "TriggerConnection": "AND",
+          "StopProcessWhenTriggered": true,
+          "Triggers": [
+            {
+              "MarketTrendName": "Exchange1h",
+              "MarketTrendRelation": "Absolute",
+              "MinChange": -4.00
+            },        
+            {
+              "MarketTrendName": "Exchange6h",
+              "MarketTrendRelation": "Absolute",
+              "MinChange": 1.33
+            },
+            {
+              "MarketTrendName": "Exchange11h",
+              "MarketTrendRelation": "Absolute",
+              "MinChange": 2.66
+            },
+            {
+              "MarketTrendName": "Exchange24h",
+              "MarketTrendRelation": "Absolute",
+              "MinChange": 7.00
+            }                
+          ],
+          "OffTriggers": [],
+          "PairsProperties": {
+            "trailing_profit": 0.83
+          },
+          "DCAProperties": {
+            "DCA_trailing_profit": 0.50
+          }
+        },
+        {
+          "SettingName": "ShortSupportProfitAdj",
+          "TriggerConnection": "AND",
+          "StopProcessWhenTriggered": true,
+          "Triggers": [
+            {
+              "MarketTrendName": "Exchange30m",
+              "MarketTrendRelation": "Absolute",
+              "MinChange": -2.00
+            },
+            {
+              "MarketTrendName": "Exchange3h",
+              "MarketTrendRelation": "Absolute",
+              "MinChange": 2.00
+            },
+            {
+              "MarketTrendName": "Exchange11h",
+              "MarketTrendRelation": "Absolute",
+              "MinChange": 0.00
+            }             
+          ],
+          "OffTriggers": [],
+          "PairsProperties": {
+            "trailing_profit": 0.50
+          },
+          "DCAProperties": {
+            "DCA_trailing_profit": 0.42
+          }
+        }
+      ]
+    }
+  }
