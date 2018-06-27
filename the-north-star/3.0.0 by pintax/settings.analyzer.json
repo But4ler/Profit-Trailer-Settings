@@ -188,7 +188,7 @@
           //User-Configuration-Needed -- Higher Risk Profile
           "DEFAULT_sell_only_mode_enabled": false,
           "DEFAULT_initial_cost_percentage": 1.35,
-          "max_trading_pairs": 13,
+          "max_trading_pairs": 16,
 
           // Buy
           "DEFAULT_A_buy_strategy": "SMASPREAD",
@@ -309,7 +309,7 @@
           //User-Configuration-Needed -- Higher Risk Profile
           "DEFAULT_sell_only_mode_enabled": false,
           "DEFAULT_initial_cost_percentage": 1.35,
-          "max_trading_pairs": 13,
+          "max_trading_pairs": 16,
 
           //Buy
           "DEFAULT_sell_only_mode_enabled": false,
@@ -340,7 +340,7 @@
 
           //User-Configuration-Needed -- Normal Risk Profile
           "DEFAULT_sell_only_mode_enabled": false,
-          "max_trading_pairs": 7,
+          "max_trading_pairs": 8,
           
           //Consolidation SMS as Default
           "DEFAULT_sell_only_mode_enabled": false,
@@ -449,7 +449,7 @@
         ],
         "PairsProperties": {
           //User-Configuration-Needed -- Normal Risk Profile
-          "DEFAULT_initial_cost_percentage": 2.00,
+          "DEFAULT_initial_cost_percentage": 2.70,
 
           "DEFAULT_sell_only_mode_enabled": false,
           "DEFAULT_A_buy_strategy": "SMASPREAD",
@@ -484,7 +484,7 @@
         ],
         "PairsProperties": {
           //User-Configuration-Needed -- Normal Risk Profile
-          "DEFAULT_initial_cost_percentage": 2.00,
+          "DEFAULT_initial_cost_percentage": 2.70,
 
           "DEFAULT_sell_only_mode_enabled": false,
           "DEFAULT_A_buy_strategy": "EMASPREAD",
@@ -568,7 +568,7 @@
         ],
         "PairsProperties": {
           //User-Configuration-Needed -- Normal Risk Profile
-          "DEFAULT_initial_cost_percentage": 2.00,
+          "DEFAULT_initial_cost_percentage": 2.70,
 
           "DEFAULT_sell_only_mode_enabled": false,
           "DEFAULT_A_buy_strategy": "OBV",
