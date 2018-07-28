@@ -1,5 +1,11 @@
 {
 "PairsProperties": {
+    "DEFAULT_sell_only_mode_enabled": false,
+    "max_trading_pairs": 5,
+    // "DEFAULT_initial_cost": 20,
+    "DEFAULT_initial_cost_percentage": 1.00,
+
+
     "DEFAULT_A_sell_strategy": "GAIN",
     "DEFAULT_A_sell_value": 0.3,
     "DEFAULT_trailing_profit": 0.15,
