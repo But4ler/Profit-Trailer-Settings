@@ -176,7 +176,7 @@
           "max_trading_pairs": 5,
 
           // Buy
-          "DEFAULT_sell_only_mode_enabled": false,
+          "DEFAULT_sell_only_mode_enabled": true,
           "DEFAULT_A_buy_strategy": "EMACROSS",
           "DEFAULT_A_buy_value": -0.01,
           "DEFAULT_A_buy_value_limit": -20,
@@ -302,7 +302,7 @@
         ],
         "PairsProperties": {
           //General - Need test for the moment, SOM enable
-          "DEFAULT_sell_only_mode_enabled": false,
+          "DEFAULT_sell_only_mode_enabled": true,
           // "DEFAULT_initial_cost": 20,
           "DEFAULT_initial_cost_percentage": 1.0,
           "max_trading_pairs": 5,
@@ -332,7 +332,17 @@
           "DEFAULT_DCA_trailing_profit": 0.25
         },
         "DCAProperties": {
-          "DEFAULT_DCA_ignore_sell_only_mode": false
+          "DEFAULT_DCA_ignore_sell_only_mode": false,
+          
+          "DEFAULT_DCA_rebuy_timeout": 60,
+          "DEFAULT_DCA_trailing_buy": 1.00,
+
+          "DEFAULT_DCA_buy_trigger_1": -2.0,
+          "DEFAULT_DCA_buy_trigger_2": -2.0,
+          "DEFAULT_DCA_buy_trigger_3": -2.0,
+          "DEFAULT_DCA_buy_trigger_4": -2.0,
+          "DEFAULT_DCA_buy_trigger_5": -2.0
+         
         }
       },
       {
@@ -516,17 +526,18 @@
           "DEFAULT_D_buy_value": 30,
           "DEFAULT_D_buy_value_limit": -30,
           "DEFAULT_E_buy_strategy": "DISABLED",
-          "DEFAULT_trailing_buy": 0.35,
+          "DEFAULT_trailing_buy": 0.75,
 
           //Sell
           "DEFAULT_A_sell_strategy": "GAIN",
           "DEFAULT_A_sell_value": 0.7,
-          "DEFAULT_trailing_profit": 0.2
+          "DEFAULT_trailing_profit": 0.33
         },
         "DCAProperties": {
+          "DEFAULT_DCA_trailing_buy": 0.75,
           //Sell
           "DEFAULT_DCA_A_sell_strategy": "GAIN",
-          "DEFAULT_DCA_A_sell_value" : 1.17,  
+          "DEFAULT_DCA_A_sell_value" : 0.7,  
           "DEFAULT_DCA_B_sell_strategy": "RSI",
           "DEFAULT_DCA_B_sell_value": 50,
 
@@ -565,7 +576,8 @@
           "DEFAULT_D_buy_value": 30,
           "DEFAULT_D_buy_value_limit": -30,
           "DEFAULT_E_buy_strategy": "DISABLED",
-          "DEFAULT_trailing_buy": 0.25,
+
+          "DEFAULT_trailing_buy": 0.75,
 
           //Sell
           "DEFAULT_A_sell_strategy": "GAIN",
@@ -573,10 +585,11 @@
           "DEFAULT_B_sell_strategy": "RSI",
           "DEFAULT_B_sell_value": 65,
 
-          "DEFAULT_DCA_trailing_profit": 0.33
+          "DEFAULT_trailing_profit": 0.33
 
         },
         "DCAProperties": {
+          "DEFAULT_trailing_buy": 0.75,
           //Sell
           "DEFAULT_DCA_A_sell_strategy": "GAIN",
           "DEFAULT_DCA_A_sell_value" : 1.17,  
@@ -666,22 +679,23 @@
           "DEFAULT_D_buy_value": 30,
           "DEFAULT_D_buy_value_limit": -30,
           "DEFAULT_E_buy_strategy": "DISABLED",
-          "DEFAULT_trailing_buy": 0.25,
+          "DEFAULT_trailing_buy": 0.75,
 
           //Sell
           "DEFAULT_A_sell_strategy": "GAIN",
-          "DEFAULT_A_sell_value" : 1.7,  
+          "DEFAULT_A_sell_value" : 0.7,  
           "DEFAULT_B_sell_strategy": "RSI",
-          "DEFAULT_B_sell_value": 60,
+          "DEFAULT_B_sell_value": 70,
 
-          "DEFAULT_DCA_trailing_profit": 0.33
+          "DEFAULT_trailing_profit": 0.33
         },
         "DCAProperties": {
+          "DEFAULT_DCA_trailing_buy": 0.75,
           //Sell
           "DEFAULT_DCA_A_sell_strategy": "GAIN",
-          "DEFAULT_DCA_A_sell_value" : 1.7,  
+          "DEFAULT_DCA_A_sell_value" : 0.7,  
           "DEFAULT_DCA_B_sell_strategy": "RSI",
-          "DEFAULT_DCA_B_sell_value": 60,
+          "DEFAULT_DCA_B_sell_value": 70,
 
           "DEFAULT_DCA_trailing_profit": 0.33
         }
@@ -726,21 +740,8 @@
           //User-Configuration-Needed -- Higher Risk Profile
           // "DEFAULT_initial_cost_percentage": 1.35,
 
-          "DEFAULT_sell_only_mode_enabled": false,
-          // "DEFAULT_A_buy_strategy": "RSI",
-          // "DEFAULT_A_buy_value": 35.50,
-          // "DEFAULT_A_buy_value_limit": 0.00,
-          // "DEFAULT_B_buy_strategy": "LOWBB",
-          // "DEFAULT_B_buy_value": -10.00,
-          // "DEFAULT_B_buy_value_limit": -35.00,
-          // "DEFAULT_C_buy_strategy": "STOCH",
-          // "DEFAULT_C_buy_value": 20.00,
-          // "DEFAULT_C_buy_value_limit": 0.00,
-          // "DEFAULT_D_buy_strategy": "BBWIDTH",
-          // "DEFAULT_D_buy_value": 34.00,
-          // "DEFAULT_D_buy_value_limit": 6.18,
-          // "DEFAULT_E_buy_strategy": "DISABLED",
-          // "DEFAULT_trailing_buy": 0.75
+          "DEFAULT_sell_only_mode_enabled": true
+
         },
         "DCAProperties": {
           "DEFAULT_DCA_ignore_sell_only_mode": false
@@ -803,7 +804,7 @@
 
           //Sell
           "DEFAULT_A_sell_strategy": "GAIN",
-          "DEFAULT_A_sell_value": 3.00,
+          "DEFAULT_A_sell_value": 2.00,
           
           "DEFAULT_DCA_B_sell_strategy": "RSI",
           "DEFAULT_DCA_B_sell_value": 80,
@@ -843,9 +844,9 @@
 
               //Sell
           "DEFAULT_DCA_A_sell_strategy": "GAIN",
-          "DEFAULT_DCA_A_sell_value" : 3.0,  
+          "DEFAULT_DCA_A_sell_value" : 2.0,  
           "DEFAULT_DCA_B_sell_strategy": "RSI",
-          "DEFAULT_DCA_B_sell_value": 80,
+          "DEFAULT_DCA_B_sell_value": 70,
 
           "DEFAULT_trailing_profit": 1.00
         }
@@ -870,7 +871,9 @@
           "DEFAULT_A_sell_strategy": "GAIN",
           "DEFAULT_A_sell_value" : 1.17,
           "DEFAULT_B_sell_strategy": "RSI",
-          "DEFAULT_B_sell_value": 65
+          "DEFAULT_B_sell_value": 65,
+
+          "DEFAULT_DCA_trailing_profit": 0.33
         },
         "DCAProperties": {
           "DEFAULT_DCA_rebuy_timeout": 480,
@@ -902,7 +905,9 @@
           "DEFAULT_DCA_A_sell_strategy": "GAIN",
           "DEFAULT_DCA_A_sell_value" : 1.17,  
           "DEFAULT_DCA_B_sell_strategy": "RSI",
-          "DEFAULT_DCA_B_sell_value": 65
+          "DEFAULT_DCA_B_sell_value": 65,
+
+          "DEFAULT_DCA_trailing_profit": 0.33
         }
       },
       {
@@ -936,11 +941,11 @@
         "PairsProperties": {
           "DEFAULT_sell_only_mode_enabled": false,
           "DEFAULT_trailing_profit": 0.83,
-          "DEFAULT_A_sell_value": 1.67
+          "DEFAULT_A_sell_value": 1.17
         },
         "DCAProperties": {
           "DEFAULT_DCA_trailing_profit": 0.50,
-          "DEFAULT_DCA_A_sell_value": 1.67
+          "DEFAULT_DCA_A_sell_value": 1.17
         }
       },
       {
@@ -969,11 +974,13 @@
         "PairsProperties": {
           "DEFAULT_sell_only_mode_enabled": false,
           "DEFAULT_trailing_profit": 0.50,
-          "DEFAULT_A_sell_value": 1.33
+          "DEFAULT_A_sell_value": 1.1
         },
         "DCAProperties": {
-          "DEFAULT_DCA_trailing_profit": 0.25,
-          "DEFAULT_A_sell_value": 1.17
+          //Sell
+          "DEFAULT_DCA_A_sell_strategy": "GAIN",
+          "DEFAULT_DCA_A_sell_value" : 1.0,  
+          "DEFAULT_DCA_trailing_profit": 0.42
         }
       }
     ]
