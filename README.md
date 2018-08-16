@@ -29,3 +29,4 @@ Disable SOM - SOMO
 - /settings/overrideSellOnlyMode?enabled=false  (to disable and maintain disabled SOM)
 - /settings/overrideSellOnlyMode?enabled=true (to activate and maintain activated SOM)
 - /settings/overrideSellOnlyMode  normal - the btc_rise, btc_drop parameters then work again.)
+- /settings/overrideSellOnlyMode?type=&enabled=false  disable SOM
