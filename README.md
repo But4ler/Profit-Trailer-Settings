@@ -3,6 +3,11 @@
 Collection of different strategies for Profit Trailer 2.0.3.
 Each time we will try to put the results obtained as well as the test period
 
+## My Best Settings for the moment
+[Pintax v5.2](https://github.com/But4ler/Profit-Trailer-Settings/tree/master/Pintax/v5.2)
+Timeframe 15min
+Note: agressive DCA for quick sell
+
 
 ## Configs list in pt_community_config folder
 
