@@ -35,8 +35,8 @@
     "DEFAULT_DCA_buy_trigger_6": -2.66,
    
 
-    
 
+    
     //Sell
     "DEFAULT_DCA_A_sell_strategy": "GAIN",
     "DEFAULT_DCA_A_sell_value" : 0.4,  
