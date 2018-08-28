@@ -1,30 +1,41 @@
 # Profit-Trailer-Settings
 
-Collection of different strategies for Profit Trailer 2.0.3.
-Each time we will try to put the results obtained as well as the test period
+Version 5.2 is the most stable.
+In comments, different adjustments are mentioned even if the default configuration does the job well
+Currently, I use this configuration with PTDefender to sell my different bags
 
-## My Best Settings for the moment
-[Pintax v5.2](https://github.com/But4ler/Profit-Trailer-Settings/tree/master/Pintax/v5.2)
-Timeframe 15min
-Note: agressive DCA for quick sell
+## Infos
+This config has been changed from a 5min to 15min timeframe
+
+15min is short, so you have to be ready to sell quickly.
+
+If the bot bought a little too high and the price goes down a little, you have to be able to buy back a little lower to be sure to have a little margin to sell later.
+
+**Indicateur:**
+- La configuration officiel de PT "Mont et Carlo"
+
+**Change Indicator file**
+- Timeframe swtich 5 to 15min
+
+**Change (in pairs and DCA file):** (After backtesting)
+- Remove price_*  trigger on main currency
+- Remove min and max change percentage
+- Update DEFAULT_trailing_buy 0.01 to 0.7
+- Update DEFAULT_DCA_trailing_buy 0.01 to 0.7
+- Update DEFAULT_trailing_profit 0.25 to 0.1
+- Update DEFAULT_A_sell_value (GAIN) 1.25% to 0.15
+- Add DEFAULT_B_sell_strategy = STOCHRSICROSS
+- Add DEFAULT_B_sell_value = -0.03
+
+**In DCA**
+- All Trigger
+- Add DCA_max_trading_pairs
+- Update Sell strategy
 
 
-## Configs list in pt_community_config folder
+## Community Configs list
 
-Timeframe | Autor Name | PTM Ready | Source | Explication |
-:------------ | :------------- | :------------- | :------------- | :------------- |
-| 5min | ASH | yes (v2.2) | [Discord PT FR](https://discordapp.com/channels/400170732648398849/400664557099679756) | Good on bull market
-| 5min | Bit4boy | Yes Ash adaptation | [Discord PT FR](https://discordapp.com/channels/400170732648398849/400664557099679756) | Adding PTM settings to the ASH config
-| 5min | Nomandog | - | Fork ASH | 
-| 5min | Znuf | - | USA/ASIA | 
-| 5min | nAffies | - | USA/ASIA | 
-| 5min | PT-Officiel | - | [PT Discord](https://discord.gg/K9a37Vh) | Go pt-dedefault-settings channel
-| 30min | Crypto Zen | Yes (stable) | [Youtube](https://www.youtube.com/watch?v=2GXXXZzIx0c) |
-| 60min | Crypto Zen | No (testing) | [Youtube](https://www.youtube.com/watch?v=2GXXXZzIx0c) |
-| 60min | Team (very serious) | Think for | [github](https://github.com/stevenshizzleh/the-north-star) | Search for entry points according to the situation of each pair 
-
-## PT Profit Type Compartif
-[Google Sheets PT_profit_type_default_grow_shrink](https://drive.google.com/open?id=1M-iD7QbuNuhVM1cDgBiJF5G81TH3YEIyLdivE1wa7Ns)
+[Move to a dedicated git repository](https://github.com/But4ler/Profit-Trailer-Community-Settings)
 
 ## PT Remember 
 
