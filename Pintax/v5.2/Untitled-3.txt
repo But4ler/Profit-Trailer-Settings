@@ -1,0 +1,27 @@
+BNB_reset_stored_average = true
+BNB_DCA_set_buy_times = 5
+BNB_bought_price = 0.000603538
+
+IOTA_reset_stored_average = true
+IOTA_DCA_set_buy_times = 5
+IOTA_bought_price = 0.0305861702
+
+ONT_reset_stored_average = true
+ONT_DCA_set_buy_times = 5
+ONT_bought_price = 0.01243
+
+WABI_reset_stored_average = true
+WABI_DCA_set_buy_times = 5
+WABI_bought_price = 0.00121
+
+XRP_reset_stored_average = true
+XRP_DCA_set_buy_times = 5
+XRP_bought_price = 0.00169
+
+TRX_reset_stored_average = true
+TRX_DCA_set_buy_times = 5
+TRX_bought_price = 0.00013
+
+
+
+BNB, IOTA, ONT, TRX, WABI, XRP
