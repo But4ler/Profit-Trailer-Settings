@@ -3,14 +3,13 @@
         "targets": [
             {
                 "type": "sftp",
-                "name": "PTFeeder bot3",
-                "description": "PTFeeder bot3",
+                "name": "PTMagic bot2",
 
-                "host": "wonder.trytry.xyz",
+                "host": "razor.trytry.xyz",
                 "port": 22,
                 "user": "root",
                 "privateKey": "C:\\Users\\toytoy\\.ssh\\id_rsa",
-                "dir": "/opt/pt/ptfeeder/config",
+                "dir": "/opt/bot2/ptmagic/",
                 
                 "mappings": {
                     "/v5.3-work-in-progress/**": "/",
