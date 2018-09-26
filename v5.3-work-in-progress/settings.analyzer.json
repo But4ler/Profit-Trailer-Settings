@@ -417,6 +417,7 @@
           }
         ],
         "PairsProperties": {
+          "max_trading_pairs": 12,
           //Sell
           "DEFAULT_A_sell_strategy": "GAIN",
           "DEFAULT_A_sell_value" : 0.6,
