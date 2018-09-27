@@ -33,6 +33,7 @@
         {
           "Name": "Exchange30m",
           "Platform": "Exchange",
+          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 30,
           "DisplayOnMarketAnalyzerList": false,
@@ -41,12 +42,14 @@
         {
           "Name": "Exchange1h",
           "Platform": "Exchange",
+          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 60
         },
         {
           "Name": "Exchange2h",
           "Platform": "Exchange",
+          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 120,
           "DisplayOnMarketAnalyzerList": false,
@@ -55,6 +58,7 @@
         {
           "Name": "Exchange3h",
           "Platform": "Exchange",
+          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 180,
           "DisplayOnMarketAnalyzerList": false,
@@ -63,6 +67,7 @@
         {
           "Name": "Exchange4h",
           "Platform": "Exchange",
+          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 240,
           "DisplayOnMarketAnalyzerList": false,
@@ -71,6 +76,7 @@
         {
           "Name": "Exchange6h",
           "Platform": "Exchange",
+          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 360,
           "DisplayOnMarketAnalyzerList": false,
@@ -79,12 +85,14 @@
         {
           "Name": "Exchange11h",
           "Platform": "Exchange",
+          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 660
         },
         {
           "Name": "Exchange15h",
           "Platform": "Exchange",
+          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 900,
           "DisplayOnMarketAnalyzerList": false,
@@ -93,6 +101,7 @@
         {
           "Name": "Exchange18h",
           "Platform": "Exchange",
+          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 1080,
           "DisplayOnMarketAnalyzerList": false,
@@ -101,6 +110,7 @@
         {
           "Name": "Exchange21h",
           "Platform": "Exchange",
+          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 1260,
           "DisplayOnMarketAnalyzerList": false,
@@ -109,12 +119,14 @@
         {
           "Name": "Exchange24h",
           "Platform": "Exchange",
+          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 1440
         },
         {
           "Name": "Exchange2d",
           "Platform": "Exchange",
+          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 2880,
           "DisplayOnMarketAnalyzerList": false,
@@ -123,6 +135,7 @@
         {
           "Name": "Exchange3d",
           "Platform": "Exchange",
+          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 4320,
           "DisplayOnMarketAnalyzerList": false,
@@ -131,6 +144,7 @@
         {
           "Name": "Exchange4d",
           "Platform": "Exchange",
+          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 5760,
           "DisplayOnMarketAnalyzerList": false,
@@ -139,6 +153,7 @@
         {
           "Name": "Exchange5d",
           "Platform": "Exchange",
+          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 7200,
           "DisplayOnMarketAnalyzerList": false,
@@ -147,6 +162,7 @@
         {
           "Name": "Exchange6d",
           "Platform": "Exchange",
+          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 8640,
           "DisplayOnMarketAnalyzerList": false,
@@ -172,9 +188,9 @@
           //User-Configuration-Needed -- Higher Risk Profile
           "DEFAULT_sell_only_mode_enabled": false,
           "DEFAULT_min_orderbook_volume_percentage": "200",
-          "DEFAULT_initial_cost_percentage": 0.7,
+          "DEFAULT_initial_cost_percentage": 1.3,
           // "DEFAULT_initial_cost": 0.0014,
-          "max_trading_pairs": 12,
+          "max_trading_pairs": 10,
 
           // Buy
           "DEFAULT_A_buy_strategy": "EMACROSS",
@@ -215,7 +231,7 @@
         "DCAProperties": {
           "DEFAULT_DCA_ignore_sell_only_mode": false,
           "DEFAULT_DCA_min_orderbook_volume_percentage": "200",
-          "DCA_max_trading_pairs": 8,
+          "DCA_max_trading_pairs": 7,
 
           // NEED BACKTEST
           // "DEFAULT_DCA_rebuy_timeout": 480,
@@ -304,7 +320,7 @@
           "DEFAULT_sell_only_mode_enabled": false,
           "DEFAULT_min_orderbook_volume_percentage": "200",
           // "DEFAULT_initial_cost": 20,
-          "DEFAULT_initial_cost_percentage": 1.0,
+          "DEFAULT_initial_cost_percentage": 1.3,
           "max_trading_pairs": 8,
 
           // Buy
@@ -368,7 +384,7 @@
           "DEFAULT_sell_only_mode_enabled": false,
           "max_trading_pairs": 8,
           // "DEFAULT_initial_cost": 20,
-          "DEFAULT_initial_cost_percentage": 1.5,
+          "DEFAULT_initial_cost_percentage": 2,
 
           //Consolidation SMS as Default
           "DEFAULT_A_buy_strategy": "EMACROSS",
@@ -533,7 +549,13 @@
           "DEFAULT_max_profit": 1
         },
         "DCAProperties": {
-          "DEFAULT_DCA_ignore_sell_only_mode": false,
+          "DEFAULT_DCA_ignore_sell_only_mode": true,
+          // "DEFAULT_DCA_ignore_sell_only_mode": false,
+          "DEFAULT_DCA_min_orderbook_volume_percentage": "200",
+          
+          // "DEFAULT_DCA_rebuy_timeout": 60,
+          "DEFAULT_DCA_trailing_buy": 1.1,
+
           // Quckly Sell
           "DEFAULT_DCA_A_sell_strategy": "GAIN",
           "DEFAULT_DCA_A_sell_value": 0.3,
@@ -561,7 +583,7 @@
         "PairsProperties": {
           //User-Configuration-Needed -- Normal Risk Profile
           // "DEFAULT_initial_cost": 0.0018,
-          "DEFAULT_initial_cost_percentage": 2.0,
+          "DEFAULT_initial_cost_percentage": 2.5,
 
           "DEFAULT_sell_only_mode_enabled": false,
           "DEFAULT_A_buy_strategy": "EMACROSS",
@@ -619,7 +641,7 @@
         "PairsProperties": {
           //User-Configuration-Needed -- Normal Risk Profile
           //"DEFAULT_initial_cost": 0.0018,
-          "DEFAULT_initial_cost_percentage": 1.3,
+          "DEFAULT_initial_cost_percentage": 2.0,
 
           "DEFAULT_sell_only_mode_enabled": false,
           "DEFAULT_A_buy_strategy": "EMACROSS",
@@ -807,7 +829,18 @@
 
         },
         "DCAProperties": {
-          "DEFAULT_DCA_ignore_sell_only_mode": false
+          "DEFAULT_DCA_ignore_sell_only_mode": true,
+          "DEFAULT_DCA_trailing_buy": 2.0,
+
+          // Quckly Sell
+          "DEFAULT_DCA_A_sell_strategy": "GAIN",
+          "DEFAULT_DCA_A_sell_value": 0.3,
+
+          "DEFAULT_DCA_B_sell_strategy": "DISABLE",
+          "DEFAULT_DCA_B_sell_value": 0,
+
+          "DEFAULT_DCA_trailing_profit": 0.15,
+          "DEFAULT_DCA_max_profit": 1
         }
       },
       {
