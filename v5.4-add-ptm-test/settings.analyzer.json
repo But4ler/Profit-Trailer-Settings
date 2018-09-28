@@ -461,7 +461,7 @@
           //Sell quickly
           "DEFAULT_A_sell_strategy": "GAIN",
           "DEFAULT_A_sell_value": 0.3,
-          "DEFAULT_B_sell_strategy": "DISABLE",
+          "DEFAULT_B_sell_strategy": "DISABLED",
 
           "DEFAULT_trailing_profit": 0.12,
           "DEFAULT_max_profit": 1
@@ -470,7 +470,7 @@
           //Sell quickly
           "DEFAULT_DCA_A_sell_strategy": "GAIN",
           "DEFAULT_DCA_A_sell_value" : 0.3,  
-          "DEFAULT_DCA_B_sell_strategy": "DISABLE",
+          "DEFAULT_DCA_B_sell_strategy": "DISABLED",
           "DEFAULT_DCA_B_sell_value": 0,
 
           "DEFAULT_DCA_trailing_profit": 0.12,
@@ -506,7 +506,7 @@
           "DEFAULT_A_sell_strategy": "GAIN",
           "DEFAULT_A_sell_value": 0.3,
           
-          "DEFAULT_B_sell_strategy": "DISABLE",
+          "DEFAULT_B_sell_strategy": "DISABLED",
 
           "DEFAULT_trailing_profit": 0.12,
           "DEFAULT_max_profit": 1
@@ -523,7 +523,7 @@
           "DEFAULT_DCA_A_sell_strategy": "GAIN",
           "DEFAULT_DCA_A_sell_value": 0.3,
 
-          "DEFAULT_DCA_B_sell_strategy": "DISABLE",
+          "DEFAULT_DCA_B_sell_strategy": "DISABLED",
           "DEFAULT_DCA_B_sell_value": 0,
 
           "DEFAULT_DCA_trailing_profit": 0.15,
@@ -806,7 +806,7 @@
           "DEFAULT_DCA_A_sell_strategy": "GAIN",
           "DEFAULT_DCA_A_sell_value": 0.3,
 
-          "DEFAULT_DCA_B_sell_strategy": "DISABLE",
+          "DEFAULT_DCA_B_sell_strategy": "DISABLED",
           "DEFAULT_DCA_B_sell_value": 0,
 
           "DEFAULT_DCA_trailing_profit": 0.12,
