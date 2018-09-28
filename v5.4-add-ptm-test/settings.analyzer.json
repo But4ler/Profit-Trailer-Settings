@@ -361,10 +361,12 @@
           },
           {
             "MarketTrendName": "Exchange24h",
-            "MinChange": 3.0
+            "MinChange": 4.0
           }
         ],
         "PairsProperties": {
+          "max_trading_pairs": 11,
+          "DEFAULT_initial_cost_percentage": 1.3,
           // Buy
           "DEFAULT_A_buy_strategy": "EMACROSS",
           "DEFAULT_A_buy_value": -0.01,
