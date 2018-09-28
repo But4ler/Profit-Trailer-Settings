@@ -1,3 +1,4 @@
 /excel/**
 .vscode/**
 /.vscode/settings.json
+/tmp/**
