@@ -33,7 +33,6 @@
         {
           "Name": "Exchange30m",
           "Platform": "Exchange",
-          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 30,
           "DisplayOnMarketAnalyzerList": false,
@@ -42,14 +41,12 @@
         {
           "Name": "Exchange1h",
           "Platform": "Exchange",
-          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 60
         },
         {
           "Name": "Exchange2h",
           "Platform": "Exchange",
-          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 120,
           "DisplayOnMarketAnalyzerList": false,
@@ -58,7 +55,6 @@
         {
           "Name": "Exchange3h",
           "Platform": "Exchange",
-          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 180,
           "DisplayOnMarketAnalyzerList": false,
@@ -67,7 +63,6 @@
         {
           "Name": "Exchange4h",
           "Platform": "Exchange",
-          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 240,
           "DisplayOnMarketAnalyzerList": false,
@@ -76,7 +71,6 @@
         {
           "Name": "Exchange6h",
           "Platform": "Exchange",
-          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 360,
           "DisplayOnMarketAnalyzerList": false,
@@ -85,14 +79,12 @@
         {
           "Name": "Exchange11h",
           "Platform": "Exchange",
-          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 660
         },
         {
           "Name": "Exchange15h",
           "Platform": "Exchange",
-          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 900,
           "DisplayOnMarketAnalyzerList": false,
@@ -101,7 +93,6 @@
         {
           "Name": "Exchange18h",
           "Platform": "Exchange",
-          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 1080,
           "DisplayOnMarketAnalyzerList": false,
@@ -110,7 +101,6 @@
         {
           "Name": "Exchange21h",
           "Platform": "Exchange",
-          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 1260,
           "DisplayOnMarketAnalyzerList": false,
@@ -119,14 +109,12 @@
         {
           "Name": "Exchange24h",
           "Platform": "Exchange",
-          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 1440
         },
         {
           "Name": "Exchange2d",
           "Platform": "Exchange",
-          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 2880,
           "DisplayOnMarketAnalyzerList": false,
@@ -135,7 +123,6 @@
         {
           "Name": "Exchange3d",
           "Platform": "Exchange",
-          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 4320,
           "DisplayOnMarketAnalyzerList": false,
@@ -144,7 +131,6 @@
         {
           "Name": "Exchange4d",
           "Platform": "Exchange",
-          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 5760,
           "DisplayOnMarketAnalyzerList": false,
@@ -153,7 +139,6 @@
         {
           "Name": "Exchange5d",
           "Platform": "Exchange",
-          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 7200,
           "DisplayOnMarketAnalyzerList": false,
@@ -162,7 +147,6 @@
         {
           "Name": "Exchange6d",
           "Platform": "Exchange",
-          "AllowedMarkets": "ETH",
           "MaxMarkets": 50,
           "TrendMinutes": 8640,
           "DisplayOnMarketAnalyzerList": false,
