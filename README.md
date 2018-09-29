@@ -24,8 +24,8 @@ If the bot bought a little too high and the price goes down a little, you have t
 - Update DEFAULT_DCA_trailing_buy 0.01 to 0.7
 - Update DEFAULT_trailing_profit 0.25 to 0.1
 - Update DEFAULT_A_sell_value (GAIN) 1.25% to 0.15
-- Add DEFAULT_B_sell_strategy = STOCHRSICROSS
-- Add DEFAULT_B_sell_value = -0.03
+- In Bull market, Add DEFAULT_B_sell_strategy = STOCHRSICROSS
+- In Bull market, Add DEFAULT_B_sell_value = -0.03
 
 **In DCA**
 - All Trigger

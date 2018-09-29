@@ -324,7 +324,7 @@
         "DCAProperties": {
           "DEFAULT_DCA_ignore_sell_only_mode": false,
           "DEFAULT_DCA_min_orderbook_volume_percentage": "200",
-          "DCA_max_trading_pairs": 5,
+          "DCA_max_trading_pairs": 7,
 
           // NEED BACKTEST
           // "DEFAULT_DCA_rebuy_timeout": 480,
@@ -930,7 +930,7 @@
           "DEFAULT_A_sell_strategy": "GAIN",
           "DEFAULT_A_sell_value" : 0.8,
 
-          "DEFAULT_DCA_trailing_profit": 0.33
+          "DEFAULT_trailing_profit": 0.33
         },
         "DCAProperties": {
           "DEFAULT_DCA_B_buy_strategy": "STOCH",
